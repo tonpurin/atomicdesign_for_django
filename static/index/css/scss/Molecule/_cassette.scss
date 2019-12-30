@@ -1,0 +1,9 @@
+.var-output-cassette {
+  // 子のコンポーネンはコンポーネント内部のスタイルだけ記述
+  p {
+    background-color: #5b80b2;
+    margin: 0;
+    color: black;
+    font-size: 2rem;
+  }
+}

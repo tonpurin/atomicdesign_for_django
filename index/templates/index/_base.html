@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}{% endblock %}｜【プロダクト名】</title>
+        {% block css %}
+        {{css}}
+        {% endblock %}
+        <meta name="robots" content="noindex">
+    </head>
+    <body>
+        <!--ヘッダーを読み込む-->
+        {% include 'index/Organisms/_header.html' %}
+
+        <!-- 各ページ固有のコンテンツ -->
+        <div>
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+        </div>
+
+        <!--フッターを読み込む-->
+        {% include 'index/Organisms/_footer.html' %}
+
+        {% block js %}
+          {{ js }}
+        {% endblock %}
+    </body>
+</html>

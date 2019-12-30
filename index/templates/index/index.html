@@ -1,0 +1,25 @@
+{% extends "index/_base.html" %}
+
+{% load static %}
+
+{% block title %}Atomicデザインのテストページ{% endblock title %}
+
+{% block css %}
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="{% static 'index/css/index.min.css' %}?{% now 'Ymdhms' %}"
+    />
+{% endblock css %}
+
+<!-- indexページ固有のコンテンツ -->
+{% block content %}
+    <!-- コンテンツ1 -->
+    <div>
+        <h1>カウンタ (上限をクエリパラメータで与える)</h1>
+        {% include 'index/Organisms/_list_cassette.html' with vars=vars %}
+    </div>
+{% endblock content %}
+
+{% block js %}
+{% endblock js %}
