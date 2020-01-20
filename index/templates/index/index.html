@@ -22,4 +22,5 @@
 {% endblock content %}
 
 {% block js %}
+    <script src="{% static 'index/js/bundle.js' %}?{% now 'Ymdhms' %}"></script>
 {% endblock js %}

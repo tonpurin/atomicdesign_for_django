@@ -15,6 +15,6 @@ module.exports = {
     // 出力するファイル名
     filename: "[name].js",
     // 出力先のパス（絶対パスを指定する必要がある）
-    path: path.join(__dirname, "public/js")
+    path: path.join(__dirname, "./")
   }
 };

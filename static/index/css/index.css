@@ -26,8 +26,10 @@ footer p {
   font-size: 2rem;
 }
 
-.var-output-cassette p, .list-var-output-cassette p {
+.list-var-output-cassette .var-output-cassette {
   background-color: #5b80b2;
+}
+.list-var-output-cassette .var-output-cassette p {
   margin: 0;
   color: black;
   font-size: 2rem;
@@ -38,7 +40,7 @@ footer p {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.list-var-output-cassette .var-output-cassette, .list-var-output-cassette .list-var-output-cassette {
+.list-var-output-cassette .var-output-cassette {
   margin-bottom: 0.5rem;
 }
 

@@ -6,10 +6,10 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 
-  @extend .var-output-cassette;
   // リストでは各カセットをやや離して配置する形で使う (配置決めは親コンポーネントで行う)
   // スタイルクローズドの原則
   .var-output-cassette {
+    @extend %var-output-cassette;
     margin-bottom: 0.5rem;
   }
 }
