@@ -109,15 +109,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _org
 
 /***/ }),
 
-/***/ "./webpack/molecule/_cassette.js":
+/***/ "./webpack/molecules/_cassette.js":
 /*!***************************************!*\
-  !*** ./webpack/molecule/_cassette.js ***!
+  !*** ./webpack/molecules/_cassette.js ***!
   \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Cassette; });\nclass Cassette {\n    // cassetteの振る舞いを定義\n\n    constructor($dom) {\n        this.$dom = $dom;\n        // 初期の背景色\n        this.initBackgroundColor = $dom.style.backgroundColor;\n        // 背景色が初期化した色かどうか\n        this.isInitBackgroundColor = true;\n    }\n\n    toggleColor(backgroundColor) {\n        // 背景色を変更するメソッド\n        if (this.isInitBackgroundColor) {\n            this.$dom.style.backgroundColor = backgroundColor;\n        }\n        else {\n            this.$dom.style.backgroundColor = this.initBackgroundColor;\n        }\n        this.isInitBackgroundColor = !this.isInitBackgroundColor;\n    }\n\n    setClickEvent(changeColor) {\n        // カセットを押したらイベントを発火させる\n        // コールバック関数とthisの罠\n        // = function() {~}とかくと, 受け取るthisはクリックされたオブジェクトになっている...違うものが渡されている\n        // アロー関数を使うと解決できる\n        this.$dom.onclick = () => { this.toggleColor(changeColor) };\n    }\n}\n\n\n//# sourceURL=webpack:///./webpack/molecule/_cassette.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Cassette; });\nclass Cassette {\n    // cassetteの振る舞いを定義\n\n    constructor($dom) {\n        this.$dom = $dom;\n        // 初期の背景色\n        this.initBackgroundColor = $dom.style.backgroundColor;\n        // 背景色が初期化した色かどうか\n        this.isInitBackgroundColor = true;\n    }\n\n    toggleColor(backgroundColor) {\n        // 背景色を変更するメソッド\n        if (this.isInitBackgroundColor) {\n            this.$dom.style.backgroundColor = backgroundColor;\n        }\n        else {\n            this.$dom.style.backgroundColor = this.initBackgroundColor;\n        }\n        this.isInitBackgroundColor = !this.isInitBackgroundColor;\n    }\n\n    setClickEvent(changeColor) {\n        // カセットを押したらイベントを発火させる\n        // コールバック関数とthisの罠\n        // = function() {~}とかくと, 受け取るthisはクリックされたオブジェクトになっている...違うものが渡されている\n        // アロー関数を使うと解決できる\n        this.$dom.onclick = () => { this.toggleColor(changeColor) };\n    }\n}\n\n\n//# sourceURL=webpack:///./webpack/molecules/_cassette.js?");
 
 /***/ }),
 
@@ -129,7 +129,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ListCassette; });\n/* harmony import */ var _molecule_cassette__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../molecule/_cassette */ \"./webpack/molecule/_cassette.js\");\n\n\nclass ListCassette {\n    // list_cassetteの振る舞いを定義\n\n    constructor($dom) {\n        // cassetteのリスト\n        this.$dom = $dom;\n\n        // 1つ1つ初期化していく\n        var color = ['red', 'green']\n        this.listCassetteInstance = [];\n        for (let index = 0; index < $dom.length; index++) {\n            // クラス追加\n            this.listCassetteInstance[index] = new _molecule_cassette__WEBPACK_IMPORTED_MODULE_0__[\"default\"](this.$dom[index]);\n            this.listCassetteInstance[index].setClickEvent(color[index%2]);\n            // this.$dom[index].onclick = () => { console.log(this)} ;\n        }\n    }\n}\n\n\n//# sourceURL=webpack:///./webpack/organisms/_list_cassette.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ListCassette; });\n/* harmony import */ var _molecules_cassette__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../molecules/_cassette */ \"./webpack/molecules/_cassette.js\");\n\n\nclass ListCassette {\n    // list_cassetteの振る舞いを定義\n\n    constructor($dom) {\n        // cassetteのリスト\n        this.$dom = $dom;\n\n        // 1つ1つ初期化していく\n        var color = ['red', 'green']\n        this.listCassetteInstance = [];\n        for (let index = 0; index < $dom.length; index++) {\n            // クラス追加\n            this.listCassetteInstance[index] = new _molecules_cassette__WEBPACK_IMPORTED_MODULE_0__[\"default\"](this.$dom[index]);\n            this.listCassetteInstance[index].setClickEvent(color[index%2]);\n            // this.$dom[index].onclick = () => { console.log(this)} ;\n        }\n    }\n}\n\n\n//# sourceURL=webpack:///./webpack/organisms/_list_cassette.js?");
 
 /***/ }),
 

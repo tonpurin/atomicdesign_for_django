@@ -1,4 +1,4 @@
-import Cassette from '../molecule/_cassette';
+import Cassette from '../molecules/_cassette';
 
 export default class ListCassette {
     // list_cassetteの振る舞いを定義
