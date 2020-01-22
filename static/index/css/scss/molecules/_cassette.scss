@@ -1,7 +1,9 @@
-.var-output-cassette {
+%var-output-cassette {
+  // https://qiita.com/one-a/items/2758511326c09200fded
+  background-color: #5b80b2;
+
   // 子のコンポーネンはコンポーネント内部のスタイルだけ記述
   p {
-    background-color: #5b80b2;
     margin: 0;
     color: black;
     font-size: 2rem;
